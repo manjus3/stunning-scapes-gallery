@@ -21,8 +21,8 @@ git checkout -b main
 git add -A
 git commit -m 'deploy'
 
-# IMPORTANT: Update these placeholders with your actual GitHub username and repository name
+# IMPORTANT: Replace USERNAME with your GitHub username and REPO with your repository name
 # Example: git push -f git@github.com:johndoe/my-photo-gallery.git main:gh-pages
-git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
+git push -f git@github.com:USERNAME/REPO.git main:gh-pages
 
 cd -
