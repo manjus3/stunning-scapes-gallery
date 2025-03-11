@@ -15,6 +15,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+// Create a basename based on the environment
+// In production (GitHub Pages), we need to use the repository name as the base
+const basename = import.meta.env.MODE === 'production' ? import.meta.env.BASE_URL : '/';
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -23,7 +27,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/portfolio/:categoryId" element={<CategoryPage />} />
